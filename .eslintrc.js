@@ -4,7 +4,7 @@ module.exports = {
     es6: true
   },
   extends: [
-    'standard'
+    'standard', 'plugin:vue/essential'
   ],
   globals: {
 
@@ -13,6 +13,7 @@ module.exports = {
     ecmaVersion: 2018
   },
   rules: {
-    ...require('./rules/basic')
+    ...require('./rules/basic'),
+    ...require('./rules/vue'),
   }
 }

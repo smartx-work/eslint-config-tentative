@@ -1,4 +1,4 @@
 module.exports = {
-    extends: ['eslint-config-standard'],
+    extends: ['standard'],
     rules: require('./rules/basic'),
 }
