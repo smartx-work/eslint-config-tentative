@@ -4,16 +4,15 @@ module.exports = {
     es6: true
   },
   extends: [
-    'standard', 'plugin:vue/essential'
+    ...require('./vue').extends
   ],
   globals: {
 
   },
   parserOptions: {
-    ecmaVersion: 2018
+    ecmaVersion: 2018,
   },
   rules: {
-    ...require('./rules/basic'),
-    ...require('./rules/vue'),
+    ...require('./vue').rules,
   }
 }
