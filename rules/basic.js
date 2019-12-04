@@ -15,7 +15,7 @@ module.exports = {
     } ],
     semi: [ 'error', 'never' ], // 未必须的分号建议省略，代码看上去更干净
     quotes: [ 1, 'single' ], // 引号类型 `` '' ''
-    'no-console': 'warn',
+    'no-console': [ 'error', { allow: [ 'warn', 'error' ] } ],
     'no-unused-vars': 'warn', // 未被使用的变量，在开发过程中，某些未开发到的逻辑，事先定义了变量
     'semi-style': [ 'error', 'first' ], // 因为使用省略分号的策略，所以吧必要的分号写在行首
     'comma-dangle': [ 'warn', 'always-multiline' ], // 对象或数组内部添加尾逗号，这样在添加新字段或数组项会比较方便
@@ -32,4 +32,6 @@ module.exports = {
     'object-curly-spacing': [ 'error', 'always' ], // 控制对象花括号前后留白
     'arrow-spacing': [ 'error', { before: true, after: true } ], // 箭头函数
     'no-prototype-builtins': 'off',
+    'no-return-assign': 'off', // 允许return中使用赋值操作
+    'no-sequences': 'off', // Array.reduce中使用逗号运算符
 }
